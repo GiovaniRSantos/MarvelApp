@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home"
-    android:label="@string/characters_screen_title"
+    android:label="@string/characters_no_results_found"
     app:startDestination="@id/charactersFragment">
 
     <fragment
