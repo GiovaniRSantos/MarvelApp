@@ -26,4 +26,6 @@ dependencies {
     api(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
     api("com.squareup.okhttp3:okhttp")
     api("com.squareup.okhttp3:logging-interceptor")
+
+    testImplementation project(":testing")
 }
