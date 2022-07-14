@@ -1,7 +1,6 @@
 package com.example.marvelapp.presentation.characters
 
 import androidx.paging.PagingData
-import com.example.core.domain.model.Character
 import com.example.core.usecase.GetCharactersUseCase
 import com.example.testing.MainCoroutineRule
 import com.example.testing.model.CharacterFactory
