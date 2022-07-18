@@ -6,7 +6,7 @@ class CharacterFactory {
 
     fun create(hero: Hero) = when (hero) {
         Hero.ThreeDMan -> Character(
-            "A.I.M.",
+            "3-D Man",
             "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         )
         Hero.ABomb -> Character(
