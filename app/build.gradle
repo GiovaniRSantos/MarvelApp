@@ -14,13 +14,22 @@ def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
+
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\Giovani\\Desktop\\projetos\\marvel\\curso-android-marvel-app\\store\\marvel_app_key_store')
+            storePassword 'Marvel@123'
+            keyAlias 'marvel-app'
+            keyPassword 'Marvel@123'
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.marvelapp"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -29,6 +38,7 @@ android {
         buildConfigField("String", "PUBLIC_KEY", apikeyProperties['PUBLIC_KEY'])
         buildConfigField("String", "PRIVATE_KEY", apikeyProperties['PRIVATE_KEY'])
         buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"'
+        signingConfig signingConfigs.debug
 
     }
 
@@ -44,7 +54,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-staging.pro'
         }
         release {
-            minifyEnabled false
+            signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
