@@ -14,7 +14,7 @@ def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     signingConfigs {
@@ -29,7 +29,7 @@ android {
     defaultConfig {
         applicationId "com.example.marvelapp"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
