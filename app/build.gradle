@@ -70,32 +70,31 @@ android {
     buildFeatures {
         viewBinding true
     }
-    android {
-        lintOptions {
-            quiet true
-            abortOnError false
-            ignoreWarnings true
-            checkAllWarnings true
-            warningsAsErrors true
-            disable 'TypographyFractions','TypographyQuotes'
-            enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
-            check 'NewApi', 'InlinedApi'
-            noLines true
-            showAll true
-            lintConfig file("default-lint.xml")
-            textReport true
-            textOutput 'stdout'
-            xmlReport false
-            xmlOutput file("lint-report.xml")
-            htmlReport true
-            htmlOutput file("lint-report.html")
-            checkReleaseBuilds true
-            fatal 'NewApi', 'InlineApi'
-            error 'Wakelock', 'TextViewEdits'
-            warning 'ResourceAsColor'
-            ignore 'TypographyQuotes'
-        }
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        checkAllWarnings true
+        warningsAsErrors true
+        disable 'TypographyFractions', 'TypographyQuotes'
+        enable 'RtlHardcoded', 'RtlCompat', 'RtlEnabled'
+        check 'NewApi', 'InlinedApi'
+        noLines true
+        showAll true
+        lintConfig file("default-lint.xml")
+        textReport true
+        textOutput 'stdout'
+        xmlReport false
+        xmlOutput file("lint-report.xml")
+        htmlReport true
+        htmlOutput file("lint-report.html")
+        checkReleaseBuilds true
+        fatal 'NewApi', 'InlineApi'
+        error 'Wakelock', 'TextViewEdits'
+        warning 'ResourceAsColor'
+        ignore 'TypographyQuotes'
     }
+
 }
 
 dependencies {
