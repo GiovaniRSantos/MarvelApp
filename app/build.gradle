@@ -72,8 +72,7 @@ android {
     }
 
     lintOptions {
-        disable 'RuleToDisable', 'SecondRuleToDisable'
-        enable 'FirstRuleToCheck', 'LastRuleToCheck'
+        abortOnError false
     }
 }
 
