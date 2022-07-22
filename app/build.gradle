@@ -14,11 +14,6 @@ def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
-    lintOptions {
-        quiet true
-        abortOnError false
-        ignoreWarnings true
-    }
     compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
